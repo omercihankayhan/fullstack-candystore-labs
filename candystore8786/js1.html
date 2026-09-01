@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CandyStore - JavaScript Validation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        function validateForm() {
+            let x = document.forms["myForm"]["fname"].value;
+
+            if (x.trim() === "") {
+                alert("Name should not be left blank. Please fill it in.");
+                return false;
+            }
+
+            // Submit the form if validation passes
+            document.forms["myForm"].submit();
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+<header>
+    <h1>Javascript Practice</h1>
+</header>
+
+<nav>
+    <a href="index.html">About Us</a>
+    <a href="products.html">Products</a>
+    <a href="menu.html">Menu</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="js1.html">JS Validation</a>
+</nav>
+
+<main>
+    <h2>JavaScript Validation Form</h2>
+
+    <form name="myForm" action="action.php" method="post" onsubmit="return validateForm()">
+        <label>Name:</label><br>
+        <input type="text" name="fname"><br><br>
+
+        <button type="submit">Submit to action page</button>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2026 Candystore by Omer Kayhan</p>
+</footer>
+</body>
+</html>
+
